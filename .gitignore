@@ -1,1 +1,4 @@
+# all files that can be generated (temp files)or downloaded(node modules 0 does not need to stored on git
 /001 inception/node_modules
+/001 inception/dist
+/001 inception/.parcel-cache
