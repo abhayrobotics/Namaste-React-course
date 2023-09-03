@@ -1,0 +1,14 @@
+{
+  "name": "namste-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "just"
+  },
+  "author": "abhay kuar",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.9.3"
+  }
+}
