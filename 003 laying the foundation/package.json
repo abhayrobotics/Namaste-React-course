@@ -1,0 +1,16 @@
+{
+  "name": "foundation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "build index.html",
+    "test": "just"
+  },
+  "author": "Abhay kumar",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
