@@ -28,19 +28,24 @@ const number = 100;
 const Header = () => (
 
          <div className="header">
+
                     <Title />
+                    <Title></Title>
+                    {Title()}
+                    
 
                     {/* any js code can be written using cirly backet  */}
                     {number}
                     {number + 100}
                     {console.log("even console can be doen in jsx")}
                     <h2>{ 200}</h2>
+                    <h3>{ "JSX protect us from cross site maliciosus data like a  bad malicious api"}</h3>
+
                     {jsxHeading}
                     {setTimeout(function(){console.log("timeout")},2000)}
 
                     <h1 className="heading" >Hello Namaste 1</h1>
-                    <h1 className="heading" >Hello Namaste 2 </h1>
-                    <h1 className="heading" >Hello Namaste 3 </h1>
+                   
                 </div>
 
 );
