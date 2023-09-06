@@ -2,9 +2,10 @@
   "name": "foundation",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  
   "scripts": {
-    "start": "build index.html",
+    "start": "parcel index.html",
+    "build ": "parcel build index.html",
     "test": "just"
   },
   "author": "Abhay kumar",
@@ -12,5 +13,9 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.9.3",
+    "process": "^0.11.10"
   }
 }
