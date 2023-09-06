@@ -23,15 +23,25 @@ const Title = () => {
     return <h1 className="title" >Title - Namaste</h1>
 };
 
+const number = 100;
 // ? Function composition- functional ocmponent inside another
-const Header = () => {
+const Header = () => (
 
-        return <div className="header">
+         <div className="header">
                     <Title />
+
+                    {/* any js code can be written using cirly backet  */}
+                    {number}
+                    {number + 100}
+                    {console.log("even console can be doen in jsx")}
+                    <h2>{ 200}</h2>
+                    {jsxHeading}
+                    {setTimeout(function(){console.log("timeout")},2000)}
+
                     <h1 className="heading" >Hello Namaste 1</h1>
                     <h1 className="heading" >Hello Namaste 2 </h1>
                     <h1 className="heading" >Hello Namaste 3 </h1>
                 </div>
 
-};
+);
 root.render(<Header />)
