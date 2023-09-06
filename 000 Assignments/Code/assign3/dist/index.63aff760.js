@@ -3049,19 +3049,19 @@ const Header0 = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         fileName: "main.js",
                         lineNumber: 32,
                         columnNumber: 13
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                        className: "logoImg",
+                        src: (0, _userPngDefault.default)
+                    }, void 0, false, {
+                        fileName: "main.js",
+                        lineNumber: 33,
+                        columnNumber: 13
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "main.js",
                 lineNumber: 30,
-                columnNumber: 9
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                className: "logoImg",
-                src: (0, _userPngDefault.default)
-            }, void 0, false, {
-                fileName: "main.js",
-                lineNumber: 34,
                 columnNumber: 9
             }, undefined)
         ]

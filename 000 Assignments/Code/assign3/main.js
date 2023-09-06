@@ -30,8 +30,8 @@ const Header0 = () => (
         <div className="search">
             <input type="search" name="" id="" />
             <h3>Search</h3>
+            <img className="logoImg" src={user} />
         </div>
-        <img className="logoImg" src={user} />
 
     </div>);
 

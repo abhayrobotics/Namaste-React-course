@@ -20,4 +20,31 @@
   padding: 2px;
 }
 
+.search {
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+}
+
+.search input {
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  margin: 5px;
+  padding: 5px 10px;
+  font-size: 1.2rem;
+}
+
+.search h3 {
+  cursor: pointer;
+  margin-right: 25px;
+  font-weight: 300;
+}
+
+.search h3:hover {
+  font-weight: 400;
+}
+
 /*# sourceMappingURL=index.3a01df49.css.map */
