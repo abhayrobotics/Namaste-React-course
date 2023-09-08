@@ -867,15 +867,15 @@ const Body = () => {
             <div className="search"></div>
             <div className="res__container">
                 {
-                    Datalist.map((item)=>(
+                    Datalist.map((item)=> {
+                        return(
                             // console.log(item);
-                            <ResCard resData = {item}/>
-                        )
+                            <ResCard key= {item.info.id} resData = {item}/>
+                        )}
                     )
                 }
               
-                <ResCard resData = {Datalist[1]}/>
-                <ResCard resData = {Datalist[2]}/>
+                
                 
 
             </div>
