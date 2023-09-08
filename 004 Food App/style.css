@@ -46,7 +46,7 @@ body{
 .res__card{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     width: 200px;
     height: 285px;
@@ -71,6 +71,8 @@ body{
 }
 .res__img img{
     width: 100%;
+    max-height: 150px;
+    border-radius: 10px;
     
     /* border: 1px solid black; */
 }
