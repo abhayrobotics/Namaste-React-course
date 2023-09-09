@@ -26,16 +26,16 @@ const Header = () => {
 }
 
 const ResCard = (props) => {
+    console.log(props);
     const {resData} =props;
     const {
         name,
         avgRating,
         cuisines,
-         areaName,
+        areaName,
         costForTwo,
-    cloudinaryImageId} =resData?.info
-    // console.log(props);
-    console.log(resData.info);
+        cloudinaryImageId} =resData?.info
+        console.log(resData.info);
     // console.log(name);
     return (
         <div className="res__card">
@@ -56,6 +56,7 @@ const ResCard = (props) => {
     )
 
 }
+
 const Datalist = [
     {
         info: {
@@ -863,6 +864,7 @@ const Datalist = [
 
 const Body = () => {
     return (
+        
         <div className="body">
             <div className="search"></div>
             <div className="res__container">
@@ -892,3 +894,4 @@ const RouteMap = () => {
 }
 
 root.render(<RouteMap />)
+
