@@ -37,7 +37,9 @@
 - to pass a key we would need a <Fragment> and <React.Fragment>
 
 
-
+## 6.virtual DOM
+## 7.reconciallion
+## 8.React Fiber
 
 
 ## 9. why keys are needed in react ?
