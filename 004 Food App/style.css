@@ -41,7 +41,7 @@ body{
     margin: 10px 20px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
 }
 .res__card{
     display: flex;
@@ -51,7 +51,7 @@ body{
     width: 200px;
     height: 285px;
     padding: 10px;
-    margin: 10px 0;
+    margin: 10px 10px;
     background-color: var(--bg2);
     border-radius: 10px;
     border: 1px solid var(--bg2);
