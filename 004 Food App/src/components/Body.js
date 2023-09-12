@@ -10,11 +10,18 @@ const Body = () => {
     return (
         
         <div className="body">
+            <div className="search">
+                <input type="search" name="searchText" id="searchInput" />
+                <button id="searching" onClick={(searchText)=>{
+                    
+
+                }}>Start Search</button>
+            </div>
             <button className="filter" onClick={()=>{
                 //? filter logic
-                console.log("button clikced")
+                // console.log("button clikced")
                 let filteredlist=  ListofRestuarant.filter((item)=>item.info.avgRating >4)
-                console.log(filteredlist)
+                // console.log(filteredlist)
 
                 setListofRestuarant(filteredlist)
             }}>
