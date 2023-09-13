@@ -7,13 +7,14 @@ console.log(Datalist)
 
 const Body = () => {
     let [ListofRestuarant,setListofRestuarant] = useState(Datalist)
+    let []
     return (
         
         <div className="body">
             <div className="search">
                 <input type="search" name="searchText" id="searchInput" />
                 <button id="searching" onClick={(searchText)=>{
-                    
+
 
                 }}>Start Search</button>
             </div>

@@ -39,6 +39,7 @@
     const [something, setSomething] = useState(initial value)
 - here setState is a function that can be called to update the variable "state" when modified from "initial value"
 
+
 ### way of using- written inside a component
     import {useState} from "react"
     function Component(){
