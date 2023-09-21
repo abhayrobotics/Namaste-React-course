@@ -7,7 +7,7 @@ console.log(Datalist)
 
 const Body = () => {
     let [ListofRestuarant,setListofRestuarant] = useState(Datalist)
-    let []
+    // let []
     return (
         
         <div className="body">
