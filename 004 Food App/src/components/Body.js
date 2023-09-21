@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Datalist } from "../utils/Datalist";
 import ResCard from "./ResCard";
 
@@ -7,7 +7,19 @@ console.log(Datalist)
 
 const Body = () => {
     let [ListofRestuarant,setListofRestuarant] = useState(Datalist)
-    // let []
+    
+    console.log(" body console")
+    // useeffect
+    useEffect(()=>{
+        console.log("use effecrt called");
+        fetchData();
+
+    },[])
+
+    const fetchData = async ()=>{
+        const json = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
+        console.log(json)
+    }
     return (
         
         <div className="body">
