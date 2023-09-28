@@ -13,7 +13,7 @@ const ShimmerBody = ()=>{
      
          i++;
     }
-    console.log(array)
+    // console.log(array)
 
  return(
 
