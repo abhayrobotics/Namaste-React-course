@@ -15,14 +15,14 @@ const ResCard = (props) => {
     // console.log(name);
     return (
         <div className="res__card">
-            <div className="res__title">
-                <h3>{name}</h3>
-            </div>
             <div className="res__img">
                 <img src={IMG_URL+cloudinaryImageId} alt="" />
             </div>
+            <div className="res__title">
+                <h3>{name}</h3>
+            </div>
             <div className="res__desc">
-                <h4>{cuisines.join(", ")} </h4>
+                <h4 className="text-hide">{cuisines.join(", ")} </h4>
                 <h4>{avgRating} star</h4>
                 <h4>{areaName}</h4>
                 <h4>{costForTwo}</h4>

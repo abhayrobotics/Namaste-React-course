@@ -6,20 +6,29 @@ console.log(Datalist)
 // let ListofRestuarant = Datalist
 
 const Body = () => {
-    let [ListofRestuarant,setListofRestuarant] = useState(Datalist)
+    let [ListofRestuarant,setListofRestuarant] = useState([])
     
     console.log(" body console")
-    // useeffect
+    // use effect, use effect works after the body rendering is complete
+
     useEffect(()=>{
-        console.log("use effecrt called");
+        console.log("use effect called");
         fetchData();
 
     },[])
-
+    // async function
     const fetchData = async ()=>{
-        const json = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
-        console.log(json)
+        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
+
+        const json = await data.json();
+        console.log(typeof json)
+        console.log(json.data.cards[2].card.card.gridElements.infoWithStyle.restaurants );
+        // optional chaining
+        const filterApiData = json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants ;
+
+    setListofRestuarant(filterApiData)
     }
+
     return (
         
         <div className="body">
