@@ -15,8 +15,7 @@ const Body = () => {
 
     // ? search text variable
     const [searchText, setSearchText] = useState("")
-
-    console.log(" body console")
+    // console.log(" body console")
 
     //? use effect, use effect works after the body rendering is complete
     useEffect(() => {
@@ -24,8 +23,8 @@ const Body = () => {
         fetchData();
 
     }, [])
-    // ? async function -data fetching
 
+    // ? async function -data fetching
     const fetchData = async () => {
         const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
 
@@ -38,53 +37,55 @@ const Body = () => {
         setListofRestuarant(filterApiData)
         setFilterRestaurant(filterApiData)
     }
-   
-   
 
     //?  Time for loading , shimmer UI
     // ?conditional rendering
     if (ListofRestuarant.length === 0) {
-        return (
-            <ShimmerBody />
-        )
+        return <ShimmerBody />
     }
     return (
 
         <div className="body">
-            <div className="search">
-                
-                <input type="text" value={searchText}
-                    onChange={(e) => {
-                        // ? updating the search text state variabel as it is binded with input tag
-                        setSearchText(e.target.value)
-                       
+            <div className="top-filter">
+                <div className="search filter__method">
 
-                    }}
-                    id="searchInput" />
-
-                <button  onClick={() => {
-
-                    // ? search new restaurant based on search
-                    
-                    let filteredSearch = ListofRestuarant.filter((item)=>{
-                        return item.info.name.toLowerCase().includes(searchText.toLowerCase())
-                    })
-                    setFilterRestaurant(filteredSearch)
-                    // console.log(filteredSearch)
+                    <input className="searchInput" type="text" value={searchText}
+                        onChange={(e) => {
+                            // ? updating the search text state variabel as it is binded with input tag
+                            setSearchText(e.target.value)
 
 
-                }}>Search</button>
+                        }}
+                        id="searchInput" />
+
+                    <button onClick={() => {
+
+                        // ? search new restaurant based on search
+
+                        let filteredSearch = ListofRestuarant.filter((item) => {
+                            return item.info.name.toLowerCase().includes(searchText.toLowerCase())
+                        })
+                        setFilterRestaurant(filteredSearch)
+                        // console.log(filteredSearch)
+
+
+                    }}>Search</button>
+                </div>
+                <button className="filter filter__method" onClick={() => {
+                    //? filter logic
+                    // console.log("button clikced")
+                    let filteredlist = ListofRestuarant.filter((item) => item.info.avgRating > 4)
+                    // console.log(filteredlist)
+
+                    setFilterRestaurant(filteredlist)
+                }}>
+                    Top Rated Restaurant
+                </button>
+                <button className="filter__method" onClick={()=>{
+                    // setFilterRestaurant(ListofRestuarant)
+                }}>ALL</button>
             </div>
-            <button className="filter" onClick={() => {
-                //? filter logic
-                // console.log("button clikced")
-                let filteredlist = ListofRestuarant.filter((item) => item.info.avgRating > 4)
-                // console.log(filteredlist)
-
-                setFilterRestaurant(filteredlist)
-            }}>
-                Top Rated Restaurant
-            </button>
+           <div className="heading">Top Restaurants in Town</div>
             <div className="res__container">
                 {
                     filteredRestaurant.map((item) => {

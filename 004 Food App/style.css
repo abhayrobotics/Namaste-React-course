@@ -47,12 +47,45 @@ body{
     text-align: center;
 }
 
+/* ********************************************************body filter************ */
+.top-filter{
+    display: flex;
+    margin: 0 55px;
+    
+
+}
+.filter__method{
+    margin: 10px 15px;
+}
+.top-filter  button{
+    outline: none;
+    background-color: var(--color-white);
+    border: 1px solid var(--main-color);
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.searchInput{
+    margin: 0 5px ;
+    padding: 5px 10px;
+    font-size: 18px;
+    border: 1px solid var(--main-color);
+    outline: none;
+    border-radius: 5px;
+}
 /* ********************************************************card************ */
+.heading{
+    font-size: 24px;
+    margin: 5px 65px ;
+    font-weight: 500;
+}
 .res__container{
-    margin: 10px 20px;
+    margin: 10px 45px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    /* margin: auto; */
 }
 .res__card{
     display: flex;
