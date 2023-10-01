@@ -9,8 +9,10 @@ import ShimmerBody from "./ShimmerBody";
 
 const Body = () => {
 
-    // ? list of Restuarants , vriable
+    // ? list of Restuarants , variable
+    // original copy- remains inatct
     let [ListofRestuarant, setListofRestuarant] = useState([])
+    // filtered copy
     const [filteredRestaurant, setFilterRestaurant] = useState([])
 
     // ? search text variable
@@ -82,7 +84,7 @@ const Body = () => {
                     Top Rated Restaurant
                 </button>
                 <button className="filter__method" onClick={()=>{
-                    // setFilterRestaurant(ListofRestuarant)
+                    setFilterRestaurant(ListofRestuarant)
                 }}>ALL</button>
             </div>
            <div className="heading">Top Restaurants in Town</div>
