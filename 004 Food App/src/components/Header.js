@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logo from "../asset/logo.png"
 import { useEffect, useState } from "react";
 
@@ -14,13 +15,13 @@ const Header = () => {
     return (
         <div className="header">
             <div className="logo">
-                <img src={logo} alt="" />
+                <Link to="/"><img src={logo} alt="" /></Link>
             </div>
             <div className="nav-items">
                 <ul>
                     <li className="menu">Offers</li>
-                    <li className="menu">Help</li>
-                    <li className="menu">About</li>
+                    <li className="menu"><Link to="/contact">Contact</Link></li>
+                    <li className="menu"><Link to="/about" > About</Link></li>
                     <li className="menu">Cart</li>
                     <li className="login" onClick={() => {
                      
