@@ -28,16 +28,22 @@ const Body = () => {
 
     // ? async function -data fetching
     const fetchData = async () => {
-        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
+        try{
 
-        const json = await data.json();
-        // console.log(json.data.cards[2].card.card.gridElements.infoWithStyle.restaurants );
-        // ? optional chaining
-        const filterApiData = json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
-        // console.log( filterApiData)
-
-        setListofRestuarant(filterApiData)
-        setFilterRestaurant(filterApiData)
+            const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
+            
+            const json = await data.json();
+            // console.log(json.data.cards[2].card.card.gridElements.infoWithStyle.restaurants );
+            // ? optional chaining
+            const filterApiData = json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+            // console.log( filterApiData)
+            
+            setListofRestuarant(filterApiData)
+            setFilterRestaurant(filterApiData)
+        }
+        catch(err){
+            console.log(Err)
+        }
     }
 
     //?  Time for loading , shimmer UI
