@@ -1,0 +1,18 @@
+# all files that can be generated (temp files)or downloaded(node modules 0 does not need to stored on git
+
+/000 Assignments/Code/assign3/node_modules
+/000 Assignments/Code/assign3/dist
+/000 Assignments/Code/assign3/.parcel-cache
+000 Assignments/Code/assign3/.parcel-cache
+
+/001 inception/node_modules
+/001 inception/dist
+/001 inception/.parcel-cache
+
+/003 laying the foundation/node_modules
+/003 laying the foundation/.parcel-cache
+/003 laying the foundation/dist
+
+/004 Food App/node_modules
+/004 Food App/.parcel-cache
+/004 Food App/dist
