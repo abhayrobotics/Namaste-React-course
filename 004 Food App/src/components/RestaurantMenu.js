@@ -20,13 +20,13 @@ const RestaurantMenu = () => {
 
 
     }, [])
-
+    console.log(useState())
 
     const fetchMenu = async () => {
 
         const response1 = await fetch(Menu_URL + resid)
         const json = await response1.json()
-        console.log(json)
+       
 
 
         const resData = json?.data?.cards[0]?.card?.card?.info
@@ -52,6 +52,7 @@ const RestaurantMenu = () => {
             <div className="content-center">
                 {/* {console.log(resFood)}
                 {console.log(resMenu)} */}
+            
                 <h3>{resMenu.name}</h3>
 
                 <p>{resMenu.cuisines.join(", ")}</p>
@@ -61,8 +62,8 @@ const RestaurantMenu = () => {
                 <ul>
                     {resFood.map((item) => {
                         return (
-                            <>
-                            <li key={item?.card?.info?.id} className="menu__item">
+                            <div key={item?.card?.info?.id}>
+                            <li  className="menu__item">
                                 <div className="text">
                                     <h4>{item?.card?.info?.name}  </h4>
                                     <h4>Rs. {item?.card?.info?.price / 100 || item?.card?.info?.defaultPrice / 100}</h4>
@@ -73,7 +74,7 @@ const RestaurantMenu = () => {
 
                             </li>
                             <hr />
-                            </>
+                            </div>
                         )
                     })
                     }
