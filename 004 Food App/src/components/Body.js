@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Datalist } from "../utils/Datalist";
 import ResCard from "./ResCard";
-
+import { Link } from "react-router-dom";
 import ShimmerBody from "./ShimmerBody";
 
 // console.log(Datalist)
@@ -99,7 +99,7 @@ const Body = () => {
                     filteredRestaurant.map((item) => {
                         // console.log(item.info.id)   
                         return (
-                            <ResCard key={item.info.id} resData={item} />
+                           <Link to={"restaurant/" + item.info.id}> <ResCard key={item.info.id} resData={item} /></Link>
                         )
                     }
                     )
