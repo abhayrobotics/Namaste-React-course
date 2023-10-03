@@ -50,20 +50,32 @@ const RestaurantMenu = () => {
         <div className="menu__card">
 
             <div className="content-center">
-                {console.log(resFood)}
-                {console.log(resMenu)}
+                {/* {console.log(resFood)}
+                {console.log(resMenu)} */}
                 <h3>{resMenu.name}</h3>
 
                 <p>{resMenu.cuisines.join(", ")}</p>
                 <p>{resMenu.areaName + ", " + resMenu.city}</p>
+                <br />
                 <hr />
                 <ul>
                     {resFood.map((item) => {
                         return (
+                            <>
+                            <li key={item?.card?.info?.id} className="menu__item">
+                                <div className="text">
+                                    <h4>{item?.card?.info?.name}  </h4>
+                                    <h4>Rs. {item?.card?.info?.price / 100 || item?.card?.info?.defaultPrice / 100}</h4>
+                                    <p>{item?.card?.info?.description}</p>
+                                   
+                                </div>
+                                <img className="menu__image" src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/" + item.card.info.imageId} alt="" />
 
-                            <li key={item?.card?.info?.id}>{item?.card?.info?.name}- Rs. {item?.card?.info?.price / 100 || item?.card?.info?.defaultPrice / 100}</li>
+                            </li>
+                            <hr />
+                            </>
                         )
-                     })
+                    })
                     }
                 </ul>
             </div>
