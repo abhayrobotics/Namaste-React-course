@@ -8,9 +8,9 @@ const About = () => {
         <div>
 
             <h2>About Us</h2>
+            <UserClass name={"Abhay Kumar Gupta class "} location={" Dhanbad"} />
             <User name={"Abhay Kumar Gupta "} location={" Dhanbad"} />
 
-            <UserClass />
         </div>
     )
 }
