@@ -99,7 +99,7 @@ const Body = () => {
                     filteredRestaurant.map((item) => {
                         // console.log(item.info.id)   
                         return (
-                           <Link to={"restaurant/" + item.info.id}> <ResCard key={item.info.id} resData={item} /></Link>
+                           <Link to={"restaurant/" + item.info.id}  key={item.info.id}> <ResCard resData={item} /></Link>
                         )
                     }
                     )
