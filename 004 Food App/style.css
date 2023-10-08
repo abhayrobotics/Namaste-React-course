@@ -273,3 +273,7 @@ li a {
     border: 1px solid black;
     
 }
+
+.user__img{
+    width: 200px;
+}

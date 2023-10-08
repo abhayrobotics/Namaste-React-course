@@ -1,39 +1,71 @@
 import React from "react"
+import Third from "./Third"
 
 class UserClass extends React.Component {
+
     constructor(props) {
         super(props)
         // console.log(props)
         this.state = {
-            count: 0,
-            count2: 2,
+            // count: 0,
+            // count2: 2,
+            userInfo :{
+                name: "Dummy",
+                location:"dummy"
+            }
         }
-        console.log("child constructor")
+        // console.log(this.props.name + "child constructor")
 
     }
-    componentDidMount(){
-        console.log(" child omponent did mount")
+    async componentDidMount() {
+        // console.log(this.props.name + " child omponent did mount")
+        const response = await fetch("https://api.github.com/users/abhayrobotics");
+        const datajson = await  response.json()
+        console.log(datajson)
+
+        this.setState({
+            userInfo:datajson
+        })
+    }
+    componentDidUpdate(){
+        // console.log("component Did Update")
+    }
+
+    componentWillUnmount(){
+        // console.log("unmount")
     }
 
     render() {
         //? props can be destructured as well
-        const { location } = this.props
-       console.log("child render")
-        // console.log(this.props)
+        const {name,location,avatar_url,login,bio} =this.state.userInfo
+        // const { location } = this.props
+        // console.log(this.props.name + "child render")
+        // console.log(this.props.userInfo)
         return (
             <div className="user-card">
                 <h3>Class Based components</h3>
                 <h3>Count: {this.state.count}</h3>
-                <button onClick={()=>{
+                <button onClick={() => {
                     this.setState({
-                    
-                        count:this.state.count+1
+
+                        count: this.state.count + 1
                     })
                 }} >Increment Count</button>
                 {/* <h3>Count2: {this.state.count2}</h3> */}
-                <h3>Name: {this.props.name}</h3>
+                {/* <h3>Name: {this.props.name}</h3> */}
+
+                <img className="user__img" src={avatar_url}  alt="" />
+                <h3>Name: {name}</h3>
+                <h3>Bio: {bio}</h3>
                 <h3>Location: {location}</h3>
-                <h3>Github: abhayrobotics</h3>
+                <h3>Github: {login}</h3>
+
+                {
+                    this.props.name == "second" ?
+                        <Third name={"2.1 "} location={" Dhanbad"} /> :
+                        <></>
+                }
+
             </div>
         )
 
