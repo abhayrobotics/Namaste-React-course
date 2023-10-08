@@ -19,20 +19,27 @@ class UserClass extends React.Component {
     }
     async componentDidMount() {
         // console.log(this.props.name + " child omponent did mount")
-        const response = await fetch("https://api.github.com/users/abhayrobotics");
-        const datajson = await  response.json()
-        console.log(datajson)
+        // const response = await fetch("https://api.github.com/users/abhayrobotics");
+        // const datajson = await  response.json()
+        // console.log(datajson)
 
-        this.setState({
-            userInfo:datajson
-        })
+        // this.setState({
+        //     userInfo:datajson
+        // })
+        this.timer =setInterval(()=>{
+            console.log("update timer")
+        },1000)
+        
     }
+    //? used when state varible changes.
     componentDidUpdate(){
-        // console.log("component Did Update")
+        console.log("component Did Update")
+      
     }
-
+    // ? clearing dependencies
     componentWillUnmount(){
         // console.log("unmount")
+        clearInterval(this.timer)
     }
 
     render() {
