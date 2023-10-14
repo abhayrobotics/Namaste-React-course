@@ -21,6 +21,7 @@ const Header = () => {
                     <li className="menu">Offers</li>
                     <li className="menu"><Link to="/contact">Contact</Link></li>
                     <li className="menu"><Link to="/about" > About</Link></li>
+                    <li className="menu"><Link to="/grocery" > Grocery</Link></li>
                     <li className="menu">Cart</li>
                     <li className="login" onClick={() => {
                      
