@@ -6,8 +6,8 @@ import useRestaurantInfo from "../utils/useRestaurantInfo";
 const RestaurantMenu = () => {
 
     const { resid } = useParams()
-    
-    // ? Custom Hook
+
+    // ? Custom Hook 
     const [resMenu, resFood] = useRestaurantInfo(resid)
 
     if (resMenu === null) {

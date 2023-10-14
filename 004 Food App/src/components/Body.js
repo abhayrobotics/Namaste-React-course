@@ -3,6 +3,7 @@ import { Datalist } from "../utils/Datalist";
 import ResCard from "./ResCard";
 import { Link } from "react-router-dom";
 import ShimmerBody from "./ShimmerBody";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 // console.log(Datalist)
 // let ListofRestuarant = Datalist
@@ -18,6 +19,7 @@ const Body = () => {
     // ? search text variable
     const [searchText, setSearchText] = useState("")
     // console.log(" body console")
+    const onlineStatus= useOnlineStatus()
 
     //? use effect, use effect works after the body rendering is complete
     useEffect(() => {
@@ -47,7 +49,10 @@ const Body = () => {
     }
 
     //?  Time for loading , shimmer UI
-    // ?conditional rendering
+    // ?conditional 
+    if(onlineStatus===false){
+        return <h1>Looks Like you're Offline. Check Your internet Connection !!</h1>
+    }
     if (ListofRestuarant.length === 0) {
         return <ShimmerBody />
     }

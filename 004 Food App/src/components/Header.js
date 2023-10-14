@@ -1,15 +1,13 @@
 import { Link } from "react-router-dom";
 import logo from "../asset/logo.png"
 import { useEffect, useState } from "react";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 
 const Header = () => {
     const [loginBtn, setLoginBtn] = useState("Login");
-    
 
-    // useEffect(()=>{
-    //     console.log("use Effect called")
-    // },[loginBtn])
+    const onlineStatus = useOnlineStatus()
     
     console.log("header render")
     return (
@@ -35,6 +33,7 @@ const Header = () => {
 
                     }} >{loginBtn}
                     </li>
+                    <li>{onlineStatus? "✅": "🔴"}</li>
                    
                 </ul>
 

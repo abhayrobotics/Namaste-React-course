@@ -21,7 +21,7 @@ const useRestaurantInfo= (resid)=>{
         const resFoodData = json?.data?.cards[2].groupedCard.cardGroupMap.REGULAR.cards[2].card.card.itemCards
         setResMenu(resData)
         setFoodInfo(resFoodData)
-
+        
     }
   
     return [resMenu,resFood]
