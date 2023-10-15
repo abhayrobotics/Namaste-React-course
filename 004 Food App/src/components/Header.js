@@ -11,19 +11,19 @@ const Header = () => {
     
     console.log("header render")
     return (
-        <div className="header flex">
-            <div className="logo">
+        <div className=" px-3 py-2 flex justify-between items-center bg-blue-950 text-white">
+            <div className="w-20">
                 <Link to="/"><img src={logo} alt="" /></Link>
                 {/* <Link to="/"><img src={require("../asset/logo.png")} alt="" /></Link> */}
             </div>
-            <div className="nav-items">
-                <ul className="flex my-4 w-4">
-                    <li className="menu">Offers</li>
-                    <li className="menu"><Link to="/contact">Contact</Link></li>
-                    <li className="menu"><Link to="/about" > About</Link></li>
-                    <li className="menu"><Link to="/grocery" > Grocery</Link></li>
-                    <li className="menu">Cart</li>
-                    <li className="login" onClick={() => {
+            <div className="">
+                <ul className="flex text-xl">
+                    <li className="menu mx-2">Offers</li>
+                    <li className="menu  mx-2"><Link to="/contact">Contact</Link></li>
+                    <li className="menu  mx-2"><Link to="/about" > About</Link></li>
+                    <li className="menu mx-2"><Link to="/grocery" > Grocery</Link></li>
+                    <li className="menu  mx-2">Cart</li>
+                    <li className="login  mx-2" onClick={() => {
                      
                             
                             
