@@ -2,7 +2,7 @@ import {useEffect, useState} from 'react'
 
 const useOnlineStatus =()=>{
 
-    const [onlinestatus,SetOnlinestatus]= useState(false);
+    const [onlinestatus,SetOnlinestatus]= useState(true);
     
     useEffect(()=>{
         console.log("useEffect")

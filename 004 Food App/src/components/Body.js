@@ -44,7 +44,7 @@ const Body = () => {
             setFilterRestaurant(filterApiData)
         }
         catch(err){
-            console.log(Err)
+            console.log(err)
         }
     }
 

@@ -49,7 +49,7 @@ const newRouter = createBrowserRouter([
                 element:(
                     <Suspense fallback= {<h2> fallback loading ...</h2>}>
 
-                        <Grocery />
+                        {/* <Grocery /> */}
                     </Suspense>
                 )
             },
@@ -63,6 +63,6 @@ const newRouter = createBrowserRouter([
 ])
 
 
-// root.render(<AppRoute />)
+// root.render(<h1>chekc</h1>)
 root.render(<RouterProvider router={newRouter} />)
 

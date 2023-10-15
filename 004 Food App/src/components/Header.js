@@ -14,7 +14,7 @@ const Header = () => {
         <div className="header">
             <div className="logo">
                 <Link to="/"><img src={logo} alt="" /></Link>
-                <Link to="/"><img src={require("../asset/logo.png")} alt="" /></Link>
+                {/* <Link to="/"><img src={require("../asset/logo.png")} alt="" /></Link> */}
             </div>
             <div className="nav-items">
                 <ul>
@@ -34,7 +34,7 @@ const Header = () => {
 
                     }} >{loginBtn}
                     </li>
-                    <li>{onlineStatus? "✅": "🔴"}</li>
+                    {/* <li>{onlineStatus? "✅": "🔴"}</li> */}
                    
                 </ul>
 
