@@ -11,13 +11,13 @@ const Header = () => {
     
     console.log("header render")
     return (
-        <div className="header">
+        <div className="header flex">
             <div className="logo">
                 <Link to="/"><img src={logo} alt="" /></Link>
                 {/* <Link to="/"><img src={require("../asset/logo.png")} alt="" /></Link> */}
             </div>
             <div className="nav-items">
-                <ul>
+                <ul className="flex my-4 w-4">
                     <li className="menu">Offers</li>
                     <li className="menu"><Link to="/contact">Contact</Link></li>
                     <li className="menu"><Link to="/about" > About</Link></li>
