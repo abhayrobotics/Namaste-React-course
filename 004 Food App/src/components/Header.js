@@ -18,12 +18,12 @@ const Header = () => {
             </div>
             <div className="">
                 <ul className="flex text-xl">
-                    <li className="menu mx-2">Offers</li>
-                    <li className="menu  mx-2"><Link to="/contact">Contact</Link></li>
-                    <li className="menu  mx-2"><Link to="/about" > About</Link></li>
-                    <li className="menu mx-2"><Link to="/grocery" > Grocery</Link></li>
-                    <li className="menu  mx-2">Cart</li>
-                    <li className="login  mx-2" onClick={() => {
+                    <li className="menu mx-2 hover:text-second-color hover:cursor-pointer">Offers</li>
+                    <li className="menu  mx-2 hover:text-second-color hover:cursor-pointer"><Link to="/contact">Contact</Link></li>
+                    <li className="menu  mx-2 hover:text-second-color hover:cursor-pointer"><Link to="/about" > About</Link></li>
+                    <li className="menu mx-2 hover:text-second-color hover:cursor-pointer"><Link to="/grocery" > Grocery</Link></li>
+                    <li className="menu  mx-2 hover:text-second-color hover:cursor-pointer">Cart</li>
+                    <li className="login  mx-2 hover:text-second-color hover:cursor-pointer" onClick={() => {
                      
                             
                             

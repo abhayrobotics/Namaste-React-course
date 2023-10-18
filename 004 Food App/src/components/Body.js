@@ -62,7 +62,7 @@ const Body = () => {
             <div className=" flex items-center mt-2">
                 <div className="search px-3 py-2  ">
 
-                    <input className="border-[1px] border-gray-600 px-2 py-1 mx-2 rounded-md" type="text" value={searchText}
+                    <input className="border-[1px] border-gray-600 px-2 py-1 mx-2 rounded-md " type="text" value={searchText}
                         onChange={(e) => {
                             // ? updating the search text state variabel as it is binded with input tag
                             setSearchText(e.target.value)
@@ -71,7 +71,7 @@ const Body = () => {
                         }}
                         id="searchInput" />
 
-                    <button className=" border-[1px] border-gray-600 px-2 py-1 mx-2 rounded-md " onClick={() => {
+                    <button className=" x-btn" onClick={() => {
 
                         // ? search new restaurant based on search
 
@@ -84,7 +84,7 @@ const Body = () => {
 
                     }}><p >Search</p> </button>
                 </div>
-                <button className=" border-[1px] border-gray-600 px-2 py-1 mx-2 rounded-md" onClick={() => {
+                <button className=" x-btn " onClick={() => {
                     //? filter logic
                     // console.log("button clikced")
                     let filteredlist = ListofRestuarant.filter((item) => item.info.avgRating > 4)
@@ -94,7 +94,7 @@ const Body = () => {
                 }}>
                 <p className=""> Top Rated Restaurant </p>
                 </button>
-                <button className=" border-[1px] border-gray-600 px-2 py-1 mx-2 rounded-lg" onClick={()=>{
+                <button className=" x-btn" onClick={()=>{
                     setFilterRestaurant(ListofRestuarant)
                 }}><p>All</p></button>
             </div>
