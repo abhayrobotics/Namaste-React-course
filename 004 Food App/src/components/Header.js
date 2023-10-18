@@ -11,7 +11,7 @@ const Header = () => {
     
     console.log("header render")
     return (
-        <div className=" px-3 py-2 flex justify-between items-center bg-blue-950 text-white">
+        <div className=" px-3 py-2 flex justify-between items-center  bg-main-color text-white">
             <div className="w-20">
                 <Link to="/"><img src={logo} alt="" /></Link>
                 {/* <Link to="/"><img src={require("../asset/logo.png")} alt="" /></Link> */}

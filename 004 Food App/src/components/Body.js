@@ -59,10 +59,10 @@ const Body = () => {
     return (
 
         <div className="body">
-            <div className="top-filter">
-                <div className="search filter__method">
+            <div className=" flex items-center mt-2">
+                <div className="search px-3 py-2  ">
 
-                    <input className="searchInput" type="text" value={searchText}
+                    <input className="border-[1px] border-gray-600 px-2 py-1 mx-2 rounded-md" type="text" value={searchText}
                         onChange={(e) => {
                             // ? updating the search text state variabel as it is binded with input tag
                             setSearchText(e.target.value)
@@ -71,7 +71,7 @@ const Body = () => {
                         }}
                         id="searchInput" />
 
-                    <button onClick={() => {
+                    <button className=" border-[1px] border-gray-600 px-2 py-1 mx-2 rounded-md " onClick={() => {
 
                         // ? search new restaurant based on search
 
@@ -82,9 +82,9 @@ const Body = () => {
                         // console.log(filteredSearch)
 
 
-                    }}>Search</button>
+                    }}><p >Search</p> </button>
                 </div>
-                <button className="filter filter__method" onClick={() => {
+                <button className=" border-[1px] border-gray-600 px-2 py-1 mx-2 rounded-md" onClick={() => {
                     //? filter logic
                     // console.log("button clikced")
                     let filteredlist = ListofRestuarant.filter((item) => item.info.avgRating > 4)
@@ -92,11 +92,11 @@ const Body = () => {
 
                     setFilterRestaurant(filteredlist)
                 }}>
-                    Top Rated Restaurant
+                <p className=""> Top Rated Restaurant </p>
                 </button>
-                <button className="filter__method" onClick={()=>{
+                <button className=" border-[1px] border-gray-600 px-2 py-1 mx-2 rounded-lg" onClick={()=>{
                     setFilterRestaurant(ListofRestuarant)
-                }}>ALL</button>
+                }}><p>All</p></button>
             </div>
            <div className="heading">Top Restaurants in Town</div>
             <div className="res__container">
