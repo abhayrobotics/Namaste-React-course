@@ -98,7 +98,8 @@ const Body = () => {
                     setFilterRestaurant(ListofRestuarant)
                 }}><p>All</p></button>
             </div>
-           <div className="mx-4 font-semibold text-2xl">Top Restaurants in Town :</div>
+           <div className="mx-4 font-semibold text-2xl">Top Restaurants  in Town :</div>
+
             <div className="flex flex-wrap mx-20 border-4 justify-center items-center">
                 {
                     filteredRestaurant.map((item) => {
