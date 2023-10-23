@@ -1,12 +1,10 @@
 import { useEffect, useState } from "react";
-import { Datalist } from "../utils/Datalist";
+
 import ResCard from "./ResCard";
 import { Link } from "react-router-dom";
 import ShimmerBody from "./ShimmerBody";
 import useOnlineStatus from "../utils/useOnlineStatus";
 
-// console.log(Datalist)
-// let ListofRestuarant = Datalist
 
 const Body = () => {
 
