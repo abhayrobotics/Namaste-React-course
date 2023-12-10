@@ -16,7 +16,7 @@ const RestaurantMenu = () => {
     return (
         <div className="menu__card">
 
-            <div className="content-center">
+            <div className="items-center">
                 {/* {console.log(resFood)}
                 {console.log(resMenu)} */}
             
@@ -26,18 +26,18 @@ const RestaurantMenu = () => {
                 <p>{resMenu.areaName + ", " + resMenu.city}</p>
                 <br />
                 <hr />
-                <ul>
+                <ul className=" flex flex-col  justify-center items-center">
                     {resFood.map((item) => {
                         return (
                             <div key={item?.card?.info?.id}>
-                            <li  className="menu__item">
-                                <div className="text">
+                            <li  className=" flex  place-content-between min-w-[700px] max-w-xl my-2 ">
+                                <div className="text ">
                                     <h4>{item?.card?.info?.name}  </h4>
                                     <h4>Rs. {item?.card?.info?.price / 100 || item?.card?.info?.defaultPrice / 100}</h4>
-                                    <p>{item?.card?.info?.description}</p>
+                                    <p className="text-slate-500">{item?.card?.info?.description}</p>
                                    
                                 </div>
-                                <img className="menu__image" src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/" + item.card.info.imageId} alt="" />
+                                <img className="menu__image  w-32 rounded-md object-cover" src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/" + item.card.info.imageId} alt="" />
 
                             </li>
                             <hr />

@@ -14,8 +14,9 @@ const Body = () => {
     // filtered copy
     const [filteredRestaurant, setFilterRestaurant] = useState([])
 
-    // const PromotedRestaurant = WithPromoted(ResCard)
+    //?  Higher Order Function
     const RestCardVeg = isVeg(ResCard);
+    
     // ? search text variable
     const [searchText, setSearchText] = useState("")
     // console.log(" body console")
