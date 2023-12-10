@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import ResCard from "./ResCard";
+import ResCard, { WithPromoted, isVeg } from "./ResCard";
 import { Link } from "react-router-dom";
 import ShimmerBody from "./ShimmerBody";
 import useOnlineStatus from "../utils/useOnlineStatus";
@@ -14,10 +14,12 @@ const Body = () => {
     // filtered copy
     const [filteredRestaurant, setFilterRestaurant] = useState([])
 
+    // const PromotedRestaurant = WithPromoted(ResCard)
+    const RestCardVeg = isVeg(ResCard);
     // ? search text variable
     const [searchText, setSearchText] = useState("")
     // console.log(" body console")
-    const onlineStatus= useOnlineStatus()
+    const onlineStatus = useOnlineStatus()
 
     //? use effect, use effect works after the body rendering is complete
     useEffect(() => {
@@ -28,27 +30,28 @@ const Body = () => {
 
     // ? async function -data fetching
     const fetchData = async () => {
-        try{
+        try {
 
             const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
-            
+
             const json = await data.json();
             // console.log(json.data.cards[2].card.card.gridElements.infoWithStyle.restaurants );
             // ? optional chaining
             const filterApiData = json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
             // console.log( filterApiData)
-            
+
             setListofRestuarant(filterApiData)
             setFilterRestaurant(filterApiData)
         }
-        catch(err){
+        catch (err) {
             console.log(err)
         }
     }
+    console.log(ListofRestuarant)
 
     //?  Time for loading , shimmer UI
     // ?conditional 
-    if(onlineStatus===false){
+    if (onlineStatus === false) {
         return <h1>Looks Like you're Offline. Check Your internet Connection !!</h1>
     }
     if (ListofRestuarant.length === 0) {
@@ -90,20 +93,29 @@ const Body = () => {
 
                     setFilterRestaurant(filteredlist)
                 }}>
-                <p className=""> Top Rated Restaurant </p>
+                    <p className=""> Top Rated Restaurant </p>
                 </button>
-                <button className=" x-btn" onClick={()=>{
+                <button className=" x-btn" onClick={() => {
                     setFilterRestaurant(ListofRestuarant)
                 }}><p>All</p></button>
             </div>
-           <div className="mx-4 font-semibold text-2xl">Top Restaurants  in Town :</div>
+            <div className="mx-4 font-semibold text-2xl">Top Restaurants  in Town :</div>
 
             <div className="flex flex-wrap mx-20 border-4 justify-center items-center">
+
                 {
+
                     filteredRestaurant.map((item) => {
                         // console.log(item.info.id)   
                         return (
-                           <Link to={"restaurant/" + item.info.id}  key={item.info.id}> <ResCard resData={item} /></Link>
+                            <Link to={"restaurant/" + item.info.id} key={item.info.id}>
+
+                            {
+                                item.info.veg? <RestCardVeg resData={item}/>:
+                                                <ResCard resData={item} />
+
+                            }
+                            </Link>
                         )
                     }
                     )

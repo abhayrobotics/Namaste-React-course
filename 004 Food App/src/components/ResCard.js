@@ -33,4 +33,17 @@ const ResCard = (props) => {
 
 }
 
+// higher order components
+export const isVeg = (ResCard) =>{
+
+    return (props)=>{
+        return(
+            <div>
+                <label className="bg-green-700 text-white absolute my-2 px-2 py-1 rounded-md text-sm">Veg</label>
+                <ResCard {...props} />
+            </div>
+        )
+    }
+}
+
 export default ResCard;
