@@ -3,13 +3,9 @@ import ItemList from "./ItemList";
 
 const FoodCategory = ({ data }) => {
     const resFood = data;
-    // const [showItems,setShowItems] = useState(false);
+    const [showIndex, setShowIndex] = useState(1)
 
-    handleClick = () => {
-        console.log("clicked")
-        // setShowItems(!showItems)
 
-    }
 
     // filtering food categories from all data
     const FilteredCategory = resFood.filter((eachItem) => {
@@ -21,8 +17,20 @@ const FoodCategory = ({ data }) => {
     return (
         <>
 
-            {FilteredCategory.map((foodCategory,index) => {
+            {FilteredCategory.map((foodCategory, index) => {
+                // changing the index to the item it is clicked
+                  handleClick = () => {
+                    console.log("clicked")
+                    setShowIndex(index)
+
+                    // if clicked on open categories it wil close
+                    if(index==showIndex){
+                        setShowIndex(null)
+                    }
+                    }
+
                 return (
+                    
                     // restaurant Name
                     <div className="shadow-lg my-4 bg-slate-100 p-2 rounded-lg " key={foodCategory.card.card.title} >
                         <div className="flex justify-between cursor-pointer" onClick={handleClick}>
@@ -30,10 +38,12 @@ const FoodCategory = ({ data }) => {
                             <div className="font-extrabold text-xl">^</div>
 
                         </div>
+                      
 
                         {/* showing each Food in that category*/}
                         <ul className=" flex flex-col  justify-center  ">
-                            {(showitems=index ==1 ?true:false) && <ItemList data={foodCategory.card.card.itemCards}  />}
+                            {console.log(showIndex, index)}
+                            {(index === showIndex ? true : false) && <ItemList data={foodCategory.card.card.itemCards}  />}
 
                         </ul>
                         <hr />

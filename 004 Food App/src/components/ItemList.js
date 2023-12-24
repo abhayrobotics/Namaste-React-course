@@ -7,7 +7,7 @@ const ItemList = ({ data }) => {
                         
                     <div key={item?.card?.info?.id}>
                         {/* food Description */}
-                        <li className=" flex   justify-between   my-2 ">
+                        <li className=" flex   justify-between   my-2  duration-200 transition-all">
                             <div className="text ">
                                 <h4 className="text-md text-gray-800 font-bold">{item?.card?.info?.name}  </h4>
                                 <h4>Rs. {item?.card?.info?.price / 100 || item?.card?.info?.defaultPrice / 100}</h4>
