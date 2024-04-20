@@ -10,6 +10,7 @@ const RestaurantMenu = () => {
 
     // ? Custom Hook 
     const [resMenu, resFood] = useRestaurantInfo(resid)
+    console.log(resMenu)
 
     if (resMenu === null) {
         return <ShimmerBody />

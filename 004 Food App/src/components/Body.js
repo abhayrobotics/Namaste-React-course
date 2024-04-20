@@ -13,12 +13,13 @@ const Body = () => {
     let [ListofRestuarant, setListofRestuarant] = useState([])
     // filtered copy
     const [filteredRestaurant, setFilterRestaurant] = useState([])
-
-    //?  Higher Order Function
-    const RestCardVeg = isVeg(ResCard);
     
     // ? search text variable
     const [searchText, setSearchText] = useState("")
+    
+    //?  Higher Order Function
+    const RestCardVeg = isVeg(ResCard);
+    
     // console.log(" body console")
     const onlineStatus = useOnlineStatus()
 

@@ -15,13 +15,13 @@ const useRestaurantInfo= (resid)=>{
 
         const response = await fetch(Menu_URL+resid)
         const json=  await response.json();
-
+        console.log(json.data)
         const resData = json?.data?.cards[0]?.card?.card?.info
 
         const resFoodData = json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR.cards
         setResMenu(resData)
         setFoodInfo(resFoodData)
-        // console.log(json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR)
+        console.log(json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR)
         
     }
   
