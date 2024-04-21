@@ -1,5 +1,6 @@
 import ShimmerBody from "./ShimmerBody";
 import { useParams } from "react-router-dom";
+
 // Custom hook
 import useRestaurantInfo from "../utils/useRestaurantInfo";
 import FoodCategory from "./FoodCategory";
@@ -10,6 +11,7 @@ const RestaurantMenu = () => {
 
     // ? Custom Hook 
     const [resMenu, resFood] = useRestaurantInfo(resid)
+    console.log(resid)
     console.log(resMenu)
 
     if (resMenu === null) {

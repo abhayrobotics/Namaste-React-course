@@ -34,7 +34,7 @@ const FoodCategory = ({ data }) => {
                     // restaurant Name
                     <div className="shadow-lg my-4 bg-slate-100 p-2 rounded-lg " key={foodCategory.card.card.title} >
                         <div className="flex justify-between cursor-pointer" onClick={handleClick}>
-                            <div className="font-extrabold text-lg text-gray-800 ">{foodCategory.card.card.title} ({foodCategory.card.card.itemCards.length})</div>
+                            <div className="font-bold text-lg text-gray-800 ">{foodCategory.card.card.title} ({foodCategory.card.card.itemCards.length})</div>
                             <div className="font-extrabold text-xl">^</div>
 
                         </div>

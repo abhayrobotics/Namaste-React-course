@@ -8,6 +8,7 @@
   "author": "Abhay kumar",
   "license": "ISC",
   "dependencies": {
+    "cloc": "^2.0.0-cloc",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.16.0"
