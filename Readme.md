@@ -64,3 +64,10 @@ console.log(heading);
 - npx parcel index.html
 
 
+## Redux Toolkit
+- install @reduxjs/toolkit and react-redux
+- Build our store
+- Connect our store to the app
+- Slice(cartslice)
+- dispatch(action)
+- selector
