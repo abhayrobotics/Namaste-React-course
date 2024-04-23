@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import logo from "../asset/logo.png"
 import { useEffect, useState } from "react";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import { useSelector } from "react-redux";
 
 
 
@@ -11,7 +12,10 @@ const Header = () => {
 
     const onlineStatus = useOnlineStatus()
     
-    console.log("header render")
+    // console.log("header render")
+    // subscribing to selector
+        // const cartItems = useSelector((store)=> store.cart.items);
+
     return (
         <div className=" px-3 py-2 flex justify-between items-center  bg-main-color text-white">
             <div className="w-20">
@@ -24,7 +28,7 @@ const Header = () => {
                     <li className="menu  mx-2 hover:text-second-color hover:cursor-pointer"><Link to="/contact">Contact</Link></li>
                     <li className="menu  mx-2 hover:text-second-color hover:cursor-pointer"><Link to="/about" > About</Link></li>
                     <li className="menu mx-2 hover:text-second-color hover:cursor-pointer"><Link to="/grocery" > Grocery</Link></li>
-                    <li className="menu  mx-2 hover:text-second-color hover:cursor-pointer">Cart</li>
+                    <li className="menu  mx-2 hover:text-second-color hover:cursor-pointer font-bold">Cart({cartItems }items)</li>
                     <li className="login  mx-2 hover:text-second-color hover:cursor-pointer" onClick={() => {
                      
                             
