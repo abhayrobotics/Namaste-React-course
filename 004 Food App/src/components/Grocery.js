@@ -1,7 +1,7 @@
 const Grocery  =() =>{
 
     return(
-        <h1>Grocery page will lots of child component, hence bundled separately </h1>
+        <h1>Grocery page will lots of child component, Hence bundled separately </h1>
     )
 }
 
