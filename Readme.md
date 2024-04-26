@@ -65,7 +65,7 @@ console.log(heading);
 
 
 ## Redux Toolkit
-- install @reduxjs/toolkit and react-redux
+- npm install @reduxjs/toolkit and react-redux
 - Build our store
 - Connect our store to the app
 - Slice(cartslice)
