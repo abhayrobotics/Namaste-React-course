@@ -1,5 +1,7 @@
 # all files that can be generated (temp files)or downloaded(node modules 0 does not need to stored on git
 
+/node_modules
+
 /000 Assignments/Code/assign3/node_modules
 /000 Assignments/Code/assign3/dist
 /000 Assignments/Code/assign3/.parcel-cache
