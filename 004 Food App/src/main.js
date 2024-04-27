@@ -8,7 +8,7 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
-import Cart from "./components/Cart";
+import Cart1 from "./components/Cart1"
 // import Grocery from "./components/Grocery";
 
 // redux
@@ -63,7 +63,7 @@ const newRouter = createBrowserRouter([
       },
       {
         path:"/cart",
-        element:<Cart />
+        element:<Cart1 />
       }
     ],
   },

@@ -30,7 +30,7 @@ const Header = () => {
                     <li className="menu  mx-2 hover:text-second-color hover:cursor-pointer"><Link to="/contact">Contact</Link></li>
                     <li className="menu  mx-2 hover:text-second-color hover:cursor-pointer"><Link to="/about" > About</Link></li>
                     <li className="menu mx-2 hover:text-second-color hover:cursor-pointer"><Link to="/grocery" > Grocery</Link></li>
-                    <li className="menu  mx-2 hover:text-second-color hover:cursor-pointer ">Cart-({cartItems.length } items)</li>
+                    <li className="menu  mx-2 hover:text-second-color hover:cursor-pointer "><Link to="/cart">Cart-({cartItems.length } items)</Link></li>
                     <li className="login  mx-2 hover:text-second-color hover:cursor-pointer" onClick={() => {
                      
                             
