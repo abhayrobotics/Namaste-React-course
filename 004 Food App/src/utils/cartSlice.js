@@ -9,11 +9,16 @@ const cartSlice = createSlice({
         addItem: (state,action) => {
             state.items.push(action.payload);
         },
-        removeItem:(state) =>{
+        removeItem:(state,action) =>{
             state.items.pop();
         },
-        clearCart: (state) =>{
-            state.items.length =0;
+        clearCart: (state,action) =>{
+
+            // Redux toolkit - either Mutute the state or return the  new state 
+            state.items.length =0;  // mutatating the state originalState =[] 
+            // return { items: []}        // return the new state =originalState =[]
+
+            // state= [] // does not work as this does not mutute te origianl state but a local copy.
         },
     },
 }
