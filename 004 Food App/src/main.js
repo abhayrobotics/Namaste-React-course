@@ -14,6 +14,8 @@ import RestaurantMenu from "./components/RestaurantMenu";
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
 
+
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 const AppRoute = () => {

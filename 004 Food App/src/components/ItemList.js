@@ -1,8 +1,17 @@
+import { useDispatch } from "react-redux"
+import { addItem } from "../utils/cartSlice"
+
 const ItemList = ({ data }) => {
+
+    const dispatch = useDispatch()
+    const addHandler1 =(item) =>{
+
+        dispatch(addItem(item))
+    }
     return (
         <>
             { data.map((item) => {
-                return (
+                return (   
                     
                         
                     <div key={item?.card?.info?.id}>
@@ -20,7 +29,7 @@ const ItemList = ({ data }) => {
                             <div className="relative">
 
                                 <img className="  w-32 rounded-md object-cover " src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/" + item.card.info.imageId} alt="" />
-                                <span className="absolute  bottom-0 right-0 px-2 py-1 text-sm rounded text-green-500 bg-white  border-1 border-black shadow-lg cursor-pointer font-bold">Add+</span>
+                                <span className="absolute  bottom-0 right-0 px-2 py-1 text-sm rounded text-green-500 bg-white  border-1 border-black shadow-lg cursor-pointer font-bold" onClick={() => addHandler1(item)}>Add+</span>
                             </div>
                         </li>
                         <hr />

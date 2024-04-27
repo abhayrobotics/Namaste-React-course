@@ -12,7 +12,7 @@ const FoodCategory = ({ data }) => {
         return (eachItem.card.card["@type"] == "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory")
 
     })
-    console.log(FilteredCategory)
+    // console.log(FilteredCategory)
 
     return (
         <>
@@ -20,7 +20,7 @@ const FoodCategory = ({ data }) => {
             {FilteredCategory.map((foodCategory, index) => {
                 // changing the index to the item it is clicked
                   handleClick = () => {
-                    console.log("clicked")
+                    // console.log("clicked")
                     setShowIndex(index)
 
                     // if clicked on open categories it wil close
@@ -42,7 +42,7 @@ const FoodCategory = ({ data }) => {
 
                         {/* showing each Food in that category*/}
                         <ul className=" flex flex-col  justify-center  ">
-                            {console.log(showIndex, index)}
+                            {/* {console.log(showIndex, index)} */}
                             {(index === showIndex ? true : false) && <ItemList data={foodCategory.card.card.itemCards}  />}
 
                         </ul>

@@ -14,7 +14,9 @@ const Header = () => {
     
     // console.log("header render")
     // subscribing to selector
-        // const cartItems = useSelector((store)=> store.cart.items);
+        const cartItems = useSelector((store)=> store.cart.items);
+
+        console.log(cartItems)
 
     return (
         <div className=" px-3 py-2 flex justify-between items-center  bg-main-color text-white">
@@ -28,7 +30,7 @@ const Header = () => {
                     <li className="menu  mx-2 hover:text-second-color hover:cursor-pointer"><Link to="/contact">Contact</Link></li>
                     <li className="menu  mx-2 hover:text-second-color hover:cursor-pointer"><Link to="/about" > About</Link></li>
                     <li className="menu mx-2 hover:text-second-color hover:cursor-pointer"><Link to="/grocery" > Grocery</Link></li>
-                    <li className="menu  mx-2 hover:text-second-color hover:cursor-pointer font-bold">Cart({cartItems }items)</li>
+                    <li className="menu  mx-2 hover:text-second-color hover:cursor-pointer ">Cart-({cartItems.length } items)</li>
                     <li className="login  mx-2 hover:text-second-color hover:cursor-pointer" onClick={() => {
                      
                             
