@@ -71,3 +71,26 @@ console.log(heading);
 - Slice(cartslice)
 - dispatch(action)
 - selector
+
+# React testing:
+npm i -D @testing-library/react
+npm i -D jest
+npm install --save-dev babel-jest @babel/core @babel/preset-env
+- 	create a babel.config.js
+
+module.exports = {
+    presets: [['@babel/preset-env', {targets: {node: 'current'}}]],
+  };
+
+-	Since, parcel also has babel installed, To disable Babel transpilation in Parcel, override the default Parcel config for JavaScript
+•	Create a .parcelrc file in root
+
+{
+  "extends": "@parcel/config-default",
+  "transformers": {
+    "*.{js,mjs,jsx,cjs,ts,tsx}": [
+      "@parcel/transformer-js",
+      "@parcel/transformer-react-refresh-wrap"
+    ]
+  }
+}
