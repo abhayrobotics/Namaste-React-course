@@ -28,3 +28,17 @@ test("check if button in contact page loads",()=>{
 
     expect(button).toBeInTheDocument();
 })
+
+test("Checking iput box in contact component",()=>{
+
+    // render
+    render(<Contact />);
+
+    // Querying
+    const inputBox = screen.getAllByRole("textbox");
+    console.log(inputBox) // array of objects
+
+    // Assertion
+    expect(inputBox.length).toBe(2);
+
+})
