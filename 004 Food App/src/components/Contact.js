@@ -1,11 +1,17 @@
+import Input from "postcss/lib/input";
 
 const Contact = ()=>{
 
     return (
         <div>
             
-            <h2>Contact</h2>
-            <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, suscipit? Rem ullam ex laboriosam nostrum ipsam, excepturi doloremque officiis voluptatum at, cumque minus dignissimos, fugit provident ea cum. Aut corporis fuga ut dolorem eos qui aliquam, laborum iste quae, earum alias ab incidunt eius tempora ex nam cum illum. Nemo?</h4>
+            <h2 className="text-2xl m-2 ">Contact</h2>
+            <form>
+                <input type="text" className="p-2 m-2 rounded border border-blue-500" placeholder="Name" />
+                <input type="text" className="p-2 m-2 rounded border border-blue-500" placeholder="Your Message" />
+                <button className="p-2 m-2 rounded border border-blue-500">Submit</button>
+            </form>
+            
         </div>
     )
 }
