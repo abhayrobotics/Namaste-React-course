@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1714319405916" clover="3.2.0">
-  <project timestamp="1714319405916" name="All files">
+<coverage generated="1714319827339" clover="3.2.0">
+  <project timestamp="1714319827339" name="All files">
     <metrics statements="22" coveredstatements="22" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2" elements="26" coveredelements="26" complexity="0" loc="22" ncloc="22" packages="1" files="2" classes="2"/>
     <file name="Contact.js" path="D:\Code\React\Namaste-React-course\004 Food App\src\components\Contact.js">
       <metrics statements="19" coveredstatements="19" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
