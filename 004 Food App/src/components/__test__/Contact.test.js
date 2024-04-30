@@ -29,6 +29,7 @@ test("check if button in contact page loads",()=>{
     expect(button).toBeInTheDocument();
 })
 
+
 test("Checking iput box in contact component",()=>{
 
     // render
