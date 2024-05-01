@@ -1,3 +1,4 @@
+// The above code is just an example of testing and does not link the the main project 
 import {sum} from "../sum";
 
 // syntax 
@@ -11,3 +12,4 @@ test("sum function return the sum of two numbers" ,()=>{
     // Assertion
     expect(result).toBe(7)
  })
+
