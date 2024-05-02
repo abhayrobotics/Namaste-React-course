@@ -44,13 +44,14 @@ const Body = () => {
             // console.log( filterApiData)
 
             setListofRestuarant(filterApiData)
+           
             setFilterRestaurant(filterApiData)
         }
         catch (err) {
             console.log(err)
         }
     }
-    // console.log(ListofRestuarant)
+    console.log(ListofRestuarant)
 
     //?  Time for loading , shimmer UI
     // ?conditional 
