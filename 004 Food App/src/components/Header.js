@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "../asset/logo.png"
+// import  logo from "../asset/logo.jpg"
 import { useEffect, useState } from "react";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import { useSelector } from "react-redux";
@@ -16,12 +16,12 @@ const Header = () => {
     // subscribing to selector
         const cartItems = useSelector((store)=> store.cart.items);
 
-        console.log(cartItems)
+        // console.log(cartItems)
 
     return (
         <div className=" px-3 py-2 flex justify-between items-center  bg-main-color text-white">
             <div className="w-20">
-                <Link to="/"><img src={logo} alt="" /></Link>
+                {/* <Link to="/"><img src={logo} alt="" /></Link> */}
                 {/* <Link to="/"><img src={require("../asset/logo.png")} alt="" /></Link> */}
             </div>
             <div className="">

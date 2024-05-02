@@ -3,6 +3,7 @@ import {sum} from "../sum";
 
 // syntax 
 // test("Descrition" ,()=>{ testcase})
+// it("Descrition" ,()=>{ testcase})
 
 
 test("sum function return the sum of two numbers" ,()=>{

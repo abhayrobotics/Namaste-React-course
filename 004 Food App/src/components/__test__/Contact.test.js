@@ -1,6 +1,6 @@
 import Contact from "../Contact";
-import { screen ,render } from "@testing-library/react";
-
+import { render } from "@testing-library/react";
+import { screen } from "@testing-library/react";
 import "@testing-library/jest-dom"
 
 
@@ -37,7 +37,7 @@ test("Checking iput box in contact component",()=>{
 
     // Querying
     const inputBox = screen.getAllByRole("textbox");
-    console.log(inputBox) // array of objects
+    // console.log(inputBox) // array of objects
 
     // Assertion
     expect(inputBox.length).toBe(2);
