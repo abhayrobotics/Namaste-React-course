@@ -22,5 +22,6 @@ it("should render a restaurant card with veg/non-veg tag",()=>{
 
     expect(checkVeg).toBeInTheDocument()
 
+
 })
 
